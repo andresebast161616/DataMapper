@@ -24,7 +24,17 @@ Build a functional and testable system in **Python** to:
 ---
 
 ## Project Structure
-proyecto/ ├── app.py ├── database/ │ └── db_connection.py ├── mappers/ │ └── user_mapper.py ├── models/ │ └── user.py ├── tests/ │ └── test_user_mapper.py ├── requirements.txt
+proyecto/ 
+├── app.py 
+├── database/ 
+│ └── db_connection.py 
+├── mappers/ 
+│ └── user_mapper.py 
+├── models/ 
+│ └── user.py 
+├── tests/ 
+│ └── test_user_mapper.py 
+├── requirements.txt
 
 
 ---
