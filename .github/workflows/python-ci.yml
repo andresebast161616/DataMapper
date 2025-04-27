@@ -6,7 +6,7 @@ on:
       - main 
   pull_request:
     branches:
-      - main 
+      - main  
 
 jobs:
   build:
@@ -24,16 +24,16 @@ jobs:
     - name: Instalar dependencias
       run: |
         python -m pip install --upgrade pip
-        pip install -r proyecto/requirements/requirements.txt  # Actualiza la ruta al archivo requirements.txt
+        pip install -r proyecto/requirements.txt  # Ruta correcta al archivo requirements.txt
 
     - name: Ejecutar la aplicación y simular entradas
       run: |
-        # Ejecutar el script de la aplicación y simular entradas usando 'echo' y 'pipe' para enviar datos a la app.
-        echo -e "Andree\nandre@gmail.com\ns\nJulio\njulio@gmail.com\nn" | python app.py  # Simula la entrada de usuario
+        # Ejecuta la aplicación y simula la entrada de datos como si un usuario estuviera interactuando.
+        echo -e "Andree\nandre@gmail.com\ns\nJulio\njulio@gmail.com\nn" | python app.py
 
     - name: Verificar la salida de la aplicación
       run: |
-        # Verifica que los usuarios se hayan agregado correctamente y que la salida contenga los datos esperados.
+        # Captura la salida de la ejecución de la aplicación y verifica si se procesaron los usuarios correctamente.
         output=$(echo -e "Andree\nandre@gmail.com\ns\nJulio\njulio@gmail.com\nn" | python app.py)
         echo "$output"
         if [[ "$output" != *"Usuario Andree agregado correctamente con ID 1."* ]]; then
